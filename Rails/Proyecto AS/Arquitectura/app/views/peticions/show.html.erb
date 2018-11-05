@@ -1,0 +1,51 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo de documento:</strong>
+  <%= @peticion.Tipo_de_documento %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @peticion.Nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @peticion.Apellido %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @peticion.Direccion %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @peticion.Correo %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @peticion.Pais %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @peticion.ciudad %>
+</p>
+
+<p>
+  <strong>Tiposolicitud:</strong>
+  <%= @peticion.tipoSolicitud %>
+</p>
+
+<p>
+  <strong>Detalle:</strong>
+  <%= @peticion.Detalle %>
+</p>
+
+<%= link_to 'Edit', edit_peticion_path(@peticion) %> |
+<%= link_to 'Back', peticions_path %>
