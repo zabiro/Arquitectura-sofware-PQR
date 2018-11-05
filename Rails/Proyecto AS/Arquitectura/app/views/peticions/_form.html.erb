@@ -1,0 +1,47 @@
+<%= form_with(model: peticion, local: true) do |form| %>
+  <% if peticion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(peticion.errors.count, "error") %> prohibited this peticion from being saved:</h2>
+
+      <ul>
+      <% peticion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Tipo_de_documento %>
+    <%= form.text_field :Tipo_de_documento, id: :peticion_Tipo_de_documento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nombre %>
+    <%= form.text_field :Nombre, id: :peticion_Nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Apellido %>
+    <%= form.text_field :Apellido, id: :peticion_Apellido %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Correo %>
+    <%= form.text_field :Correo, id: :peticion_Correo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ciudad %>
+    <%= form.text_field :ciudad, id: :peticion_ciudad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Detalle %>
+    <%= form.text_area :Detalle, id: :peticion_Detalle %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
